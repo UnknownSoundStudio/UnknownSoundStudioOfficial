@@ -1,0 +1,51 @@
+ 
+
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    padding: 10px 10px;
+}
+ul > li {
+    font-size: 30px;
+    line-height: 50px;
+}
+ul > li > a {
+    display: inline-block;
+    position: relative;
+}
+ul > li > a:after {
+    content:"";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: rgb(255, 0, 0);
+    transition: all .5s;
+}
+ul > li > a:before {
+    content:"";
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: rgb(255, 0, 0);
+    transition: all .5s;
+}
+ul > li > a:hover:after {
+    width: 20%
+}
+ul > li > a:hover:before {
+    width: 50%
+}
