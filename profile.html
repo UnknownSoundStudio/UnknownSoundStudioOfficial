@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UnknownSoundStudio Official Site</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|IBM+Plex+Sans:600" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Call Jquery -->
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.4/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.4/dist/js/uikit-icons.min.js"></script>
+
+    <!-- Call Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</head>
+<!-- head -->
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="#">
+								<img class="header-logo-image asset-light" src="dist/images/black-svg.svg" alt="Logo">
+								<img class="header-logo-image asset-dark" src="dist/images/black-svg.svg" alt="Logo">
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+<!-- 메뉴 -->
+        <body> <ul> <li><a href="index.html">메인</a></li>
+            <li><a href="profile.html">개발중</a></li>
+            <li><a href="#">개발중</a></li> </ul>
+        </body>
+
+
+<!-- 공지사항 -->
+        <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+            <TBODY>
+            <TR vAlign=center align=left>
+            <TD><HEIGHT=30 width="12" border="0"></TD>
+            <TD width="100%">
+            <P align=left>&nbsp;<B><A href="http://unknownmall.xyz/">공지사항</A></B></P></TD>
+            <TD><HEIGHT=30 width="8" border="0"></TD></TR>
+            <TR vAlign=top>
+            <TD>&nbsp;</TD>
+            <TD>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm_Bkem096dGwCLt577UEyaR_qfJnPteLXUpR3baLfyr7-STYvelf_Ri4o-CPiX3l0NdQ&usqp=CAU" style="width:50px; height:50px;"/>  
+
+                <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+            <TBODY>
+            <TR>
+            <TD bgColor=#535FD7>
+            <MARQUEE onmouseover=this.stop() style="WIDTH: 100%; HEIGHT: 58px" onmouseout=this.start() scrollAmount=1 direction=up>
+            <DIV style="PADDING-RIGHT: 0px; OVERFLOW-Y: auto; PADDING-LEFT: 0px; OVERFLOW-X: hidden; PADDING-BOTTOM: 3px; WIDTH: 100%; PADDING-TOP: 3px">
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+            <TBODY>
+            <TR>
+            <TD vAlign=top width="100%">
+  
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+            <TBODY>
+            <TR>
+            <TD height=20>&nbsp;<SPAN class=board style="FONT-SIZE: 20pt"><A href="https://url.kr/kzfrac" target="_blank">   <p style="color:white;">사운드클라우드에 신곡이 올라왔습니다.</p></FONT></B></A></A></SPAN></TD></TR>
+            <TR>
+            <TD height=20>&nbsp;<SPAN class=board style="FONT-SIZE: 15pt"><A href="http://unknownmall.xyz/" target="_blank"><p style="color:white;">이 홈페이지에 후원을 하시려면 (카카오뱅크 7777-01-5449356)로 후원해주시면 사이트를 위해 쓰여집니다. 추가로 후원자 명단에 올라갑니다 :)</p></FONT></B></A></A></SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></MARQUEE></TD></TR></TBODY></TABLE></TD>
+            <TD>&nbsp;</TD></TR></TBODY></TABLE>
+
+
+<!-- 안내 -->
+            <div id="modalaudio" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body">
+                    <p class="uk-modal-title uk-text-center">환영합니다 !</p>
+                    <p>주의 !</p>
+                    <p style="color: black;">본 사이트는 자동으로 노래가 틀어집니다.<br>
+                    미리 볼륨믹서로 가셔서 소리를 조정하시기 바랍니다.<br>
+                <p style="color: red;">⚠️소리를 조정하지 않아 생기는 문제는 책임지지 않습니다.⚠️</p></p>
+                <p style="color: black">아래 버튼이아닌 <strong>다른 곳</strong>을 클릭하면 음악이 <strong>출력되지 않습니다.</strong></p>
+                    <p class="uk-text-center">
+                        <button id="accept" class="uk-button uk-button-default uk-modal-close" type="button">⚠️[소리가 큽니다. 확인하셨습니까?]</button>
+                    </p>
+                </div>
+            </div>
+
+
+<!-- audio sample :D -->
+<audio id="audioAccess" preload="auto">
+    <source src="audio/iloveit.mp3">
+</audio>
+
+            <script>
+                window.onload = function() {
+                    var modal = UIkit.modal("#modalaudio");
+                    modal.show();
+                };
+            
+                // Define audio elements
+                var audioAccess = document.getElementById("audioAccess");
+            
+            
+                // Button Actions
+                document.getElementById("accept").onclick = function(){
+                    audioAccess.currentTime = 0;
+                    audioAccess.play();
+                }
+            
+
+
+
+
+            </script>
+
+
+
+
+
+        </main>
+
+        
+        
+<!-- 메인 사이트 소개 -->        
+<main>
+    <section class="hero">
+        <div class="container">
+                <div class="hero-copy">
+                    <div class="hero-cta">
+                        <div class="lights-toggle">
+                            <input id="lights-toggle">
+                            <span></span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- 푸터 -->
+
+        
+        <footer class="site-footer has-top-divider">
+            <div class="container">
+                <div class="site-footer-inner">
+                    <div class="brand footer-brand">
+                        <a href="#">
+							<img class="asset-light" src="dist/images/black-svg.svg" alt="Logo">
+							<img class="asset-dark" src="dist/images/black-svg.svg" alt="Logo">
+                        </a>
+                    </div>
+                    <ul class="footer-social-links list-reset">
+                        <li>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+                    <div class="footer-copyright">&copy; 2022 UnknownSoundStudio, all rights reserved</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    
+
+
+
+    <script src="dist/js/main.min.js"></script>
+</body>
+</html>
